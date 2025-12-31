@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Beloved Amuu</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Initial Screen -->
+    <div id="initialScreen" class="screen active">
+        <div class="initial-container">
+            <h1 class="greeting-title">Hi Amuu 💌</h1>
+            <p class="greeting-message">
+                You know i wanted to give you something so i made this, a little something made by me, by your beloved muu hehe
+            </p>
+            <div class="action-prompt">
+                <p class="prompt-text">Wanna see what i made?</p>
+                <button class="btn btn-primary" id="yesBtn">Yes 💕</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Music and Card Container -->
+    <div id="cardScreen" class="screen">
+        <audio id="backgroundMusic" preload="auto" loop>
+            <source src="music.mp3" type="audio/mpeg">
+        </audio>
+
+        <!-- Greeting Card -->
+        <div class="card-wrapper">
+            <div class="card-container">
+                <!-- Front Cover -->
+                <div class="card-page active" data-page="0">
+                    <div class="page-content cover-page">
+                        <div class="cover-design">
+                            <h1 class="cover-title">Special Gift</h1>
+                            <p class="cover-subtitle">For Someone Special</p>
+                            <div class="cover-decoration"></div>
+                            <div class="circular-image-display-cover" id="circularDisplayCover">
+                                <div class="circular-frame">
+                                    <img id="mainImage" src="cover-image.jpg" alt="You">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Page 1 -->
+                <div class="card-page" data-page="1">
+                    <div class="page-content">
+                        <p class="page-text">
+                            Hey amuu, i wish we could spend this new year together but it's alright, at least we have each other. i wish i could tell you how much i love you, how much you mean to me, how much i care and how much our bond truly matters. you know amuu, i used to think i was unlucky but ever since you I've started thinking that I'm the luckiest guy ever hehehe. I've started smiling, working harder, I've stopped overthinking (i mean atitau koru but komai koru atleast) ughhhh I can't even tell you how much i wanna talk about at this moment. i have a lot and i believe this simple card won't be enough, god i wish ami jate usorote thakilu hoi, i would've hugged you so tight my amuu. amuu, yeah that reminds me of that lovely name, amuu. how beautiful that is, it's not just beautiful, it's deep as well as it has such a deep meaning.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Page 2 -->
+                <div class="card-page" data-page="2">
+                    <div class="page-content">
+                        <p class="page-text">
+                            amuu, this name, the very name that i call you with is an abbreviation of amore, amore means love in Italian and that is why i call you that. Apart from that it also resembles muu, the nickname you gave me. ugghhhhhh i love that nickname, i love you, i love everything about you and i love everything related to you. you know amuu, it's amazing how we started. well it was such a story but god always kept us close and always showed us a way towards each other. all i want now is to stay with you till the day i die and live a happy and peaceful life where we'll live together as a happy family. a family where you, me, our parents and our lovely kids mayra and agastya would live together under the same roof hehehe. i just wanna stay with you forever and then die by your side while holding your hands. i wanna spend my entire life with you, i want you to be the first thing i look at whenever i wake up and the last thing i look at before sleeping.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Page 3 - Image Collage (Hanging Polaroid Style) -->
+                <div class="card-page" data-page="3">
+                    <div class="page-content collage-page">
+                        <div class="collage-container">
+                            <!-- Polaroid 1 -->
+                            <div class="polaroid polaroid-1">
+                                <div class="polaroid-image" id="img1" style="background-image: url('img1.jpg');"></div>
+                                <p class="polaroid-caption">My lovely amuu</p>
+                            </div>
+
+                            <!-- Polaroid 2 -->
+                            <div class="polaroid polaroid-2">
+                                <div class="polaroid-image" id="img2" style="background-image: url('img2.jpg');"></div>
+                                <p class="polaroid-caption">The person who brought colors to my life</p>
+                            </div>
+
+                            <!-- Polaroid 3 -->
+                            <div class="polaroid polaroid-3">
+                                <div class="polaroid-image" id="img3" style="background-image: url('img3.jpg');"></div>
+                                <p class="polaroid-caption">The little gangster hehehe</p>
+                            </div>
+
+                            <!-- Polaroid 4 -->
+                            <div class="polaroid polaroid-4">
+                                <div class="polaroid-image" id="img4" style="background-image: url('img4.jpg');"></div>
+                                <p class="polaroid-caption">The love of my life, my lovely wife</p>
+                            </div>
+                        </div>
+
+                        <p class="collage-message">
+                            Just look at you, how cute you are, how adorable you are and you'd still say yuckkk to this. You'd never understand how much i love these pictures, how much i love you, how much i love your clumsy behaviour hehehe.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Page 4 - Final Page -->
+                <div class="card-page" data-page="4">
+                    <div class="page-content final-page">
+                        <p class="page-text final-message">
+                            ugghhhhh i'mma end it here, i can't even explain how much more i have to say but for now that's enough hehe. amuu my amuu, my lovely chasmish. i wanna stay with you forever you know so let's promise that we'll always stay together and always keep each other close, let's promise that we'd always fight for us with everything and everyone even our own selves and stay together. <span class="love-declaration">I LOVE YOU MY AMUU</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation Controls -->
+        <div class="navigation-controls">
+            <button class="btn btn-nav" id="prevBtn" style="display:none;">← Previous</button>
+            <button class="btn btn-nav" id="nextBtn">Next →</button>
+        </div>
+    </div>
+
+    <!-- Final Screen -->
+    <div id="finalScreen" class="screen">
+        <div class="final-container">
+            <div class="confetti-container" id="confettiContainer"></div>
+            <div class="final-message-box">
+                <h1 class="final-title">I LOVEEE YOUU</h1>
+                <p class="final-subtitle">MY NAKHRE DIKHANE WALI PYAARI SI BIWI</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
